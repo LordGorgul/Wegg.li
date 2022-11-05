@@ -1,0 +1,43 @@
+/* /Pages/Index.razor.rz.scp.css */
+h1[b-cncagxxkdt], h2[b-cncagxxkdt] {
+    color: white;
+    text-shadow: black 0px 0px 10px;
+}
+
+h1[b-cncagxxkdt] {
+    font-size: 70px;
+}
+/* /Pages/World.razor.rz.scp.css */
+.spinner[b-kuftontidn] {
+    border: 16px solid silver;
+    border-top: 16px solid #337AB7;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin-b-kuftontidn 700ms linear infinite;
+}
+
+@keyframes spin-b-kuftontidn {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.fade-in-out[b-kuftontidn] {
+    animation: fade-in-out-b-kuftontidn 5s;
+}
+
+.fade-in-out-8s[b-kuftontidn] {
+    animation: fade-in-out-b-kuftontidn 8s;
+}
+
+
+@keyframes fade-in-out-b-kuftontidn {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+/* /Shared/MainLayout.razor.rz.scp.css */
