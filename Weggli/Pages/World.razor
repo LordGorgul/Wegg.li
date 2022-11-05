@@ -1,0 +1,48 @@
+﻿@page "/world"
+@using System.Linq.Expressions
+
+<MudContainer Class="d-flex flex-column justify-content-center align-items-center" Style="height: 100%">
+    <MudPaper Class="pa-16 ma-2 parent" Elevation="10" MinHeight="80%" MaxHeight="80%" MinWidth="100%" Style="background-color: firebrick; border-radius: 15px">
+        @if (status.Equals("initial"))
+            {
+                <MudButton Size="Size.Large" Class="mb-5" Variant="Variant.Outlined" OnClick="@(async () => await HandleClick())" Style="color: floralwhite; border-color: floralwhite">Let's go!</MudButton>
+                
+            }
+            else if (status.Equals("spinning"))
+            {
+                <div class="spinner"></div>
+            }
+            else if (status.Equals("text"))
+            {
+                @text
+                <br/>
+                @subtext
+            }
+    </MudPaper>
+</MudContainer>
+
+@code {
+    string status = "initial";
+    RenderFragment? text;
+    RenderFragment? subtext;
+
+    async Task HandleClick()
+    {
+        status = "spinning";
+        await Task.Delay(3000);
+        status = "text";
+        text = @<h2 class="fade-in-out" style="color: floralwhite; font-style: italic">For a moment, nothing happened.</h2>;
+        StateHasChanged();
+        await Task.Delay(4900);
+        text = @<h2 class="fade-in-out" style="color: floralwhite; font-style: italic">Then, after a second or so...</h2>;
+        StateHasChanged();
+        await Task.Delay(4900);
+        text = @<h2 class="fade-in-out-8s" style="color: floralwhite; font-style: italic">...nothing continued to happen.</h2>;
+        subtext = @<h6 class="fade-in-out-8s" style="color: floralwhite; font-style: italic">― Douglas Adams, The Hitchhiker's Guide to the Galaxy</h6>;
+        StateHasChanged();
+        await Task.Delay(7900);
+        text = @<h2></h2>;
+        subtext = @<h6></h6>;
+        status = "initial";
+    }
+}

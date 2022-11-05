@@ -1,0 +1,8 @@
+h1, h2 {
+    color: white;
+    text-shadow: black 0px 0px 10px;
+}
+
+h1 {
+    font-size: 70px;
+}

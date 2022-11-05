@@ -1,0 +1,22 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider/>
+<MudDialogProvider/>
+<MudSnackbarProvider/>
+<MudLayout Style="height: 100%">
+    <MudAppBar>
+        @*<MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />*@
+        <MudSpacer />
+        <MudText Typo="Typo.h5" Class="ml-3" Align="Align.Center"> <a href="/" style="color: inherit">Wegg.li</a></MudText>
+        <MudSpacer />
+        <MudMenu Icon="@Icons.Material.Filled.MoreVert" AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopRight">
+            <MudMenuItem Href="/world">Show me the world!</MudMenuItem>
+        </MudMenu>
+
+    </MudAppBar>
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.Medium" Style="height: 100%">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
