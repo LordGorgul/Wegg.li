@@ -18,7 +18,7 @@ jobs:
         dotnet-version: 6.0.402
         
     - name: Change base-tag in index.html from / 
-      run: sed -i 's/<a href="\/" \/>/<a href="\/Wegg.li\/" \/>/g' Weggli/Shared/MainLayout.razor
+      run: sed -i 's/<a href="\/"/<a href="\/Wegg.li\/"/g' Weggli/Shared/MainLayout.razor
 
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
