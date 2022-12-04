@@ -1,11 +1,11 @@
 ﻿@inherits LayoutComponentBase
 
-<MudThemeProvider/>
+<MudThemeProvider Theme="@_customTheme"/>
 <MudDialogProvider/>
 <MudSnackbarProvider/>
-<MudLayout Style="height: 100%">
+<MudLayout>
     <MudAppBar>
-        @*<MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />*@
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
         <MudSpacer />
         <MudText Typo="Typo.h5" Class="ml-3" Align="Align.Center"> <a href="/" style="color: inherit">Wegg.li</a></MudText>
         <MudSpacer />
@@ -14,9 +14,41 @@
         </MudMenu>
 
     </MudAppBar>
+    
+    <MudDrawer @bind-Open="@_drawerOpen" Variant="DrawerVariant.Temporary">
+        <NavMenu />
+    </MudDrawer>
+    
     <MudMainContent>
-        <MudContainer MaxWidth="MaxWidth.Medium" Style="height: 100%">
+        <MudContainer Style="height: 100%" MaxWidth="MaxWidth.Medium">
             @Body
         </MudContainer>
     </MudMainContent>
 </MudLayout>
+
+@code {
+    bool _drawerOpen;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+    MudTheme _customTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            DrawerBackground = Colors.Red.Darken3,
+            AppbarBackground = Colors.Red.Darken3,
+            Background = Colors.Red.Darken3,
+            Surface = Colors.Red.Darken3,
+            ActionDefault = "#FFFFFF",
+            DrawerIcon = "#FFFFFF",
+            AppbarText = "#FFFFFF",
+            DrawerText = "#FFFFFF",
+            Primary = "#FFFFFF",
+            TextPrimary = "#FFFFFF"
+        }
+    };
+
+}

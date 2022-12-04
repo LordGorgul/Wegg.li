@@ -1,0 +1,33 @@
+﻿@page "/Recipes"
+@using MudBlazor.Services
+
+<MudContainer Style="min-height: 100%" Class="d-flex flex-column justify-content-center mt-5">
+    <MudPaper Class="pa-16 ma-2 rounded-lg d-flex flex-column justify-content-center align-items-center" Elevation="10" MinHeight="50%" MinWidth="100%">
+        <MudIconButton Icon="@Icons.Material.Filled.Add" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Large"/>
+        <MudDivider Class="mt-5 mb-5" DividerType="DividerType.Middle" Style="width: 100%;"/>
+        <MudGrid Justify="Justify.Center">
+            @foreach (var recipe in _recipes)
+            {
+                <MudItem xs="12" sm="6" md="4" >
+                    <RecipeCard Recipe="@recipe"></RecipeCard>
+                </MudItem>
+            }
+        </MudGrid>
+    </MudPaper>
+</MudContainer>
+
+@code {
+    List<Recipe> _recipes = new List<Recipe>()
+    {
+        new Recipe("Recipe1", "This is a somewhat longer description to see how it looks like with a bit more text"),
+        new Recipe("Longer Receipt title to show responsiveness", "Description 1"),
+        new Recipe("Longer Receipt title to show responsiveness", "This is a somewhat longer description to see how it looks like with a bit more text"),
+        new Recipe("Recipe 2", "Description 1"),
+        new Recipe("Recipe 2", "Description 1"),
+        new Recipe("Recipe 2", "Description 1"),
+        new Recipe("Recipe 2", "Description 1"),
+        new Recipe("Recipe 2", "Description 1"),
+        new Recipe("Recipe 2", "Description 1"),
+        new Recipe("Recipe 2", "Description 1")
+    };
+}

@@ -21,16 +21,7 @@ html, body, #app {
     height: 100%;
 }
 
-.mud-toolbar {
-    background-color: firebrick;
-}
-
-.mud-icon-root {
-    color: darkorange;
-}
-
 .mud-list {
-    background-color: darkred;
     border-radius: 10px;
     border-color: indianred;
     border-width: thin;
