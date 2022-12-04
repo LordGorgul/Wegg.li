@@ -11,25 +11,6 @@ h1[b-cncagxxkdt] {
     text-align: center;
 }
 /* /Pages/World.razor.rz.scp.css */
-.spinner[b-kuftontidn] {
-    border: 16px solid silver;
-    border-top: 16px solid #337AB7;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    animation: spin-b-kuftontidn 700ms linear infinite;
-}
-
-@keyframes spin-b-kuftontidn {
-    0% {
-        transform: rotate(0deg)
-    }
-
-    100% {
-        transform: rotate(360deg)
-    }
-}
-
 .fade-in-out[b-kuftontidn] {
     animation: fade-in-out-b-kuftontidn 5s;
 }
