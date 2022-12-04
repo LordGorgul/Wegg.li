@@ -9,3 +9,16 @@ h1 {
     font-size: 70px;
     text-align: center;
 }
+.parent {
+    background-color: whitesmoke;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-image: url("Schweizer-Weggli-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}

@@ -3,7 +3,7 @@
 <MudThemeProvider Theme="@_customTheme"/>
 <MudDialogProvider/>
 <MudSnackbarProvider/>
-<MudLayout>
+<MudLayout Style="height: 100%">
     <MudAppBar>
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
         <MudSpacer />
@@ -19,8 +19,8 @@
         <NavMenu />
     </MudDrawer>
     
-    <MudMainContent>
-        <MudContainer Style="height: 100%" MaxWidth="MaxWidth.Medium">
+    <MudMainContent Style="height: 100%;">
+        <MudContainer Style="height: 100%; padding: unset" MaxWidth="MaxWidth.ExtraLarge ">
             @Body
         </MudContainer>
     </MudMainContent>
@@ -40,7 +40,7 @@
         {
             DrawerBackground = Colors.Red.Darken3,
             AppbarBackground = Colors.Red.Darken3,
-            Background = Colors.Red.Darken3,
+            Background = Colors.Grey.Lighten5,
             Surface = Colors.Red.Darken3,
             ActionDefault = "#FFFFFF",
             DrawerIcon = "#FFFFFF",

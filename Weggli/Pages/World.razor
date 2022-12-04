@@ -2,11 +2,12 @@
 @using System.Linq.Expressions
 
 <MudContainer Class="d-flex flex-column justify-content-center align-items-center" Style="height: 100%">
-    <MudPaper Class="pa-16 ma-2 parent" Elevation="10" MinHeight="80%" MaxHeight="80%" MinWidth="100%" Style="background-color: firebrick; border-radius: 15px">
-        @if (status.Equals("initial"))
+    <MudPaper Class="pa-16 ma-2 parentclass" Elevation="10" MinHeight="80%" MaxHeight="80%" MinWidth="100%" Style="border-radius: 15px; padding-top: 1.1rem">
+        <div class="parentclass">
+            @if (status.Equals("initial"))
             {
                 <MudButton Size="Size.Large" Class="mb-5" Variant="Variant.Outlined" OnClick="@(async () => await HandleClick())" Style="color: floralwhite; border-color: floralwhite">Let's go!</MudButton>
-                
+
             }
             else if (status.Equals("spinning"))
             {
@@ -18,6 +19,7 @@
                 <br/>
                 @subtext
             }
+        </div>
     </MudPaper>
 </MudContainer>
 
