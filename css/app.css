@@ -1,36 +1,18 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
-html, body, #app {
+#app {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-image: url("../Schweizer-Weggli-1.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100%;
-}
-
-.parent {
-    display: flex;
+    display: flex; 
+    align-items: center; 
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
 }
 
 .mud-main-content {
     height: 100%;
 }
 
-.mud-toolbar {
-    background-color: firebrick;
-}
-
-.mud-icon-root {
-    color: darkorange;
-}
-
 .mud-list {
-    background-color: darkred;
     border-radius: 10px;
     border-color: indianred;
     border-width: thin;
@@ -108,7 +90,7 @@ a, .btn-link {
 
 .spinner {
     border: 16px solid silver;
-    border-top: 16px solid #337AB7;
+    border-top: 16px solid darkred;
     border-radius: 50%;
     width: 80px;
     height: 80px;

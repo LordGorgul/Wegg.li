@@ -10,6 +10,20 @@ h1[b-cncagxxkdt] {
     font-size: 70px;
     text-align: center;
 }
+.parent[b-cncagxxkdt] {
+    background-color: whitesmoke;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-image: url("Schweizer-Weggli-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%
+}
 /* /Pages/World.razor.rz.scp.css */
 .fade-in-out[b-kuftontidn] {
     animation: fade-in-out-b-kuftontidn 5s;
@@ -24,4 +38,13 @@ h1[b-cncagxxkdt] {
     0%, 100% { opacity: 0; }
     50% { opacity: 1; }
 }
+
+.parentclass[b-kuftontidn] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
+/* /Shared/NavMenu.razor.rz.scp.css */
