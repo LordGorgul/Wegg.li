@@ -17,6 +17,9 @@ jobs:
       with:
         dotnet-version: 7.0.100
 
+    - name: Restore .NET Workload
+      run: dotnet workload restore
+      
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
       run: dotnet publish Weggli/Weggli.csproj -c Release -o release --nologo
